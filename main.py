@@ -35,7 +35,6 @@ mappings = {
     "vehicle": [("Road Problem", 0.5), ("Transportation", 0.3), ("Accident", 0.1), ("Road Maintenance", 0.1)]
 }
 '''
-bucket_name = "reportown-347509.appspot.com"
 bucket = storage_client.bucket(bucket_name)
 '''
 
@@ -91,12 +90,6 @@ def predict_category():
         cv2.destroyAllWindows()
     except Exception as e:
         print(e)
-
-    '''
-    prediction = Prediction(predictions=confidences)
-    json_data = jsonable_encoder(prediction)
-    return JSONResponse(content=json_data)
-    '''
 
 
 predict_category()
